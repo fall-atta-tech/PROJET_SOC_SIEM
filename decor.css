@@ -1,0 +1,51 @@
+    @keyframes clignoter {
+       0% { 
+        opacity: 1; 
+        transform: scale(1); 
+        box-shadow: 0 0 0px rgba(139, 0, 0, 0); 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: scale(1.5); /* La pastille grossit légèrement */
+        box-shadow: 0 0 20px #8B0000; /* Halo lumineux de la couleur du texte/bord */
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1); 
+        box-shadow: 0 0 0px rgba(139, 0, 0, 0);
+    }
+}
+    table{
+        border:1px dashed aqua;
+        border-radius:10px;
+        padding:20px; 
+        width:100%;  
+        cursor: pointer;  
+    }
+    th, td{
+        padding: 10px;
+        text-align: center; 
+    }
+    .formrond{
+        width: 20px;
+        height: 20px;
+        border-radius:50%;
+        display:inline-block;
+        animation: clignoter 1.5s infinite;
+    }
+    .up{
+        background-color:green;
+    }
+    .down{
+        background-color:#8B0000;
+    }
+    .attente{
+        background-color:yellow;
+    }
+button{
+    background-color: red;
+    font-weight: bold;
+    border:1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}

@@ -1,0 +1,96 @@
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    color: blue;
+   
+}
+p{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:1px solid blue;
+    border-radius: 10px;
+    width:100%;
+    padding: 20px;
+}
+button{
+    background-color: aquamarine;
+    font-weight: bold;
+    border:1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+/* On cible les div qui sont dans le formulaire */
+form div {
+    display: flex;             
+    justify-content: space-between; /* Pousse le texte à gauche et l'input à droite */
+    align-items: center;       /* Aligne verticalement le texte et la case */
+    width: 100%;               /* Prend toute la largeur du formulaire */
+    margin-bottom: 15px;  /* Espace entre la ligne Identifiant et la ligne MDP */
+    padding: 20px;
+}
+/* Pour que les cases soient toutes de la même taille */
+form input {
+    font-weight: bold;
+    width: 200px;       
+    padding: 5px;    
+    border-radius: 5px;
+}
+label{
+    font-weight: bold;
+}
+a{
+    font-weight: bold;
+}
+h3{
+    background-color: #e3f2fd; /* Un fond bleu très clair */
+    color: #1976d2;           /* Un texte bleu foncé */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #1976d2;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 350px;         /* Même taille que le bloc h5 */
+    text-align: center;
+    font-weight: bold;
+}
+h4{
+    background-color: #FFF9C4; /* Un fond rouge très clair */
+    color: #5D4037 ;           
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #FBC02D;
+    margin-bottom: 20px;       /* Pour écarter le formulaire */
+    width: 100%;
+    max-width: 350px;          /* Pour que ça fasse la même taille que le bloc */
+    text-align: center;
+    font-weight: bold;
+}
+h5{
+    background-color: #FFEBEE ; /* Un fond rouge très clair #ffebee*/
+    color: #B71C1C;            /* Un texte rouge foncé #c62828*/
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #D32F2F;
+    margin-bottom: 20px;       /* Pour écarter le formulaire  #c62828*/
+    width: 100%;
+    max-width: 350px;          /* Pour que ça fasse la même taille que le bloc */
+    text-align: center;
+    font-weight: bold;
+}
+
