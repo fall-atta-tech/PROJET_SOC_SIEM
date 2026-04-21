@@ -2,8 +2,7 @@ h1{
     display: flex;
     justify-content: center;
     font-size: 100px;
-    color: blue;
-   
+    color: blue;   
 }
 p{
     display: flex;

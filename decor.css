@@ -1,3 +1,7 @@
+    body{
+        background-color: #f0f0f0;
+        cursor: pointer;
+    }
     @keyframes clignoter {
        0% { 
         opacity: 1; 
@@ -15,16 +19,42 @@
         box-shadow: 0 0 0px rgba(139, 0, 0, 0);
     }
 }
+h5{
+    background-color: #FFEBEE ; /* Un fond rouge très clair #ffebee*/
+    color: #B71C1C;            /* Un texte rouge foncé #c62828*/
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #D32F2F;
+    margin-bottom: 20px;       /* Pour écarter le formulaire  #c62828*/
+    width: 100%;
+    max-width: 350px;          /* Pour que ça fasse la même taille que le bloc */
+    text-align: center;
+    font-weight: bold;
+}
+h3{
+    background-color: #e3f2fd; /* Un fond bleu très clair */
+    color: #1976d2;           /* Un texte bleu foncé */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #1976d2;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 350px;         /* Même taille que le bloc h5 */
+    text-align: center;
+    font-weight: bold;
+}
     table{
-        border:1px dashed aqua;
+        border:1px solid blue;
         border-radius:10px;
         padding:20px; 
-        width:100%;  
-        cursor: pointer;  
+        width:100%; 
+        border-collapse: collapse;           
     }
     th, td{
-        padding: 10px;
-        text-align: center; 
+         background-color: #333;
+         color: white;
+         padding: 10px;
+         text-align: center; 
     }
     .formrond{
         width: 20px;
@@ -42,10 +72,38 @@
     .attente{
         background-color:yellow;
     }
-button{
-    background-color: red;
+    button{
+        background-color: red;
+        font-weight: bold;
+        border:1px solid black;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .deco{        
+        display:inline-block;
+        font-weight:bold;        
+        color: blue;
+        text-align: center;        
+    }
+    .decore{
+        display:inline-block;      
+        color: blue;
+        text-decoration: none;
+        font-weight: bold;
+        border:1px solid blue;
+        border-radius: 4px;        
+        padding: 2px;
+    }
+    /* pour les alertes critiques (Suppression) */
+.HAUTE {
+    color: #d32f2f; /* Un rouge sombre et sérieux */
     font-weight: bold;
-    border:1px solid black;
-    border-radius: 5px;
-    padding: 5px;
+    background-color: #ffebee; 
 }
+/* Style pour les infos (Ajout) */
+.INFO {
+    color: #1976d2; 
+    font-weight: 500;
+}
+

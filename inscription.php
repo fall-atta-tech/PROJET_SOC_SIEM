@@ -11,9 +11,11 @@
         <main>   
             <?php
             if(isset($_GET['erreur'])){
-               if($_GET['erreur']==1){
-                  echo"<h4>Ce nom d'utilisateur est déja utilisé</h4>";
-               }else if($_GET['erreur']==2){
+               if($_GET['erreur']==0){
+                  echo"<h4>format de mot de passe invalide saisir au moins 8 caractéres(des majuscules, des minuscules et des chiffres)</h4>";
+               }else if($_GET['erreur']==1){
+                  echo"<h4>Ces identifiants sont déja utilisées</h4>";
+               }else{
                   echo"<h5>Erreur serveur en panne</h5>";
                }
             }

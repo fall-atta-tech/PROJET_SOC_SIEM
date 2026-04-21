@@ -10,11 +10,15 @@
         <main>   
             <?php
               if(isset($_GET['erreur'])){
-                 if($_GET['erreur']==1){
+                if($_GET['erreur']==0){
+                    echo"<h4>Format d'adresse IP ou MAC invalide</h4>";
+                }else if($_GET['erreur']==1){
                      echo"<h4>Cet équipement existe déja</h4>";
-                 }else if($_GET['erreur']==2){
+                }else if($_GET['erreur']==2){
                      echo"<h5>Erreur serveur en panne</h5>";
-                    }
+                }else if($_GET['erreur']==3){
+                  echo"<h4>Vous ne disposez pas des droits nécessaires pour effectuer cette action</h4>";
+                }               
                 }
             ?>         
             <form method='post' action='ajout.php'>
@@ -35,9 +39,13 @@
                    <input type='text' name='mac' id='mac' required>
                 </div>
                 <div>
-                   <label for='local'>localisation</label>
+                   <label for='local'>Localisation</label>
                    <input type='text' name='local' id='local' required> 
                 </div >
+                <div>
+                   <label for='etat'>Etat</label>
+                   <input type='text' name='etat' id='etat' required> 
+                </div >                
                 <div>
                    <button type='submit'>Ajouter</button>
                 </div>                
