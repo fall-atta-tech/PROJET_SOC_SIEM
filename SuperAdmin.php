@@ -44,9 +44,9 @@ if(isset($_SESSION['verif'],$_SESSION['id_admin'])){
           echo"<td>".htmlspecialchars($admin['statut'])."</td>";
           echo"<td>".$approbation."</td>";
           //on récupére en même temps l'id de l'admin pour savoir ou effectuer l'action et l'action pour savoir laquelle effectuer
-          echo"<td><a href='gestion_admin.php?id=$admin['id_admin']&action=approuver' class='.appro'>Approuver</a>";
-          echo"<td><a href='gestion_admin.php?id=$admin['id_admin']&action=promouvoir' class='.promo'>Promouvoir</a>";
-          echo"<td><a href='gestion_admin.php?id=$admin['id_admin']&action=revoquer' class='.revoc'>Révoquer</a>";
+          echo"<td><a href='gestion_admin.php?id=".$admin['id_admin']."&action=approuver' class='appro'>Approuver</a>";
+          echo"<td><a href='gestion_admin.php?id=".$admin['id_admin']."&action=promouvoir' class='promo'>Promouvoir</a>";
+          echo"<td><a href='gestion_admin.php?id=".$admin['id_admin']."&action=revoquer' class='revoc'>Révoquer</a>";
           echo"</tr>";
         }
           echo"</table>";
