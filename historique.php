@@ -1,10 +1,5 @@
 <?php
-session_start();
-?>
-<html>
-  <meta http-equiv="refresh" content="30">
-  <link rel='stylesheet' href='decor.css'> 
-<?php
+ session_start();
   include'filtre.php';
  if (isset($_SESSION['last_move']) && (time() - $_SESSION['last_move']) < 1800){
    if(isset($_SESSION['verif'],$_SESSION['id_admin'])){
@@ -45,7 +40,7 @@ session_start();
           echo"<th>Date</th></tr>";          
           while($message=$demande->fetch(PDO::FETCH_ASSOC)){
             $classe=htmlspecialchars($message['priorite']); 
-            echo"<tr class='".$classe."'><td>".$classe."</td>";
+            echo"<tr><td><span class='formrond $classe'></span>".$classe."</td>";
             echo"<td>".htmlspecialchars($message['modif'])."</td>";
             echo"<td>".htmlspecialchars($message['date_modif'])."</td></tr>";
           }
@@ -63,5 +58,4 @@ session_start();
   header("location:deconnexion.php");
   exit;
  }
-?>
-</html>
+ ?>

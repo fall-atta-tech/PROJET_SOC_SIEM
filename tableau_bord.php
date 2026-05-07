@@ -11,13 +11,17 @@
         header("location:login.php?erreur=0");
      }else{
         include 'db_connect.php';
-        if(isset($_GET['erreur'],$_GET['succes'])){
+        if(isset($_GET['erreur'])){
          if($_GET['erreur']==0){
             echo"<h5>Vous ne disposez pas des droits nécessaires pour effectuer cette action </h5>";
-         }else if($_GET['succes']==0){
-            echo"<h3>Equipement ajouté avec succés</h3>";
          }else if($_GET['erreur']==1){
             echo"<h5>Serveur en panne</h5>";
+         }
+        }else if(isset($_GET['succes'])){
+         if($_GET['succes']==0){
+            echo"<h3>Equipement ajouté avec succés</h3>";
+         }else if($_GET['succes']==1){
+             echo"<h3>Equipement supprimé avec succés</h3>";
          }
         }
         $demande=$pdo->prepare("SELECT equipement.*, sante.etat FROM equipement

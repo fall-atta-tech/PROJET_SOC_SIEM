@@ -23,8 +23,7 @@
         border:1px solid blue;
         border-radius:10px;
         padding:20px; 
-        width:100%; 
-        border-collapse: collapse;           
+        width:100%;         
     }
     th, td{
          color: #333;
@@ -36,7 +35,7 @@
         height: 20px;
         border-radius:50%;
         display:inline-block;
-        animation: clignoter 1.5s infinite;
+        animation: clignoter 1s infinite;
     }
     .up{
         background-color:green;
@@ -55,7 +54,7 @@
     gap: 10px; /* Ajoute un espace précis entre chaque bouton */
 }
     button{
-        background-color: red;
+        background-color: #B71C1C;
         font-weight: bold;
         border:1px solid black;
         text-decoration: none;
@@ -79,7 +78,7 @@
     }
     h5{
     background-color: #FFEBEE ; /* Un fond rouge très clair #ffebee*/
-    color: #B71C1C;            /* Un texte rouge foncé #c62828*/
+    color: #B71C1C ;            /* Un texte rouge foncé /
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #D32F2F;
@@ -103,7 +102,7 @@ h3{
 }
     .appro{
         display:inline-block;      
-        color:green;
+        color:#1B5E20;
         text-decoration: none;
         font-weight: bold;
         border:1px solid green;
@@ -130,12 +129,10 @@ h3{
     }
     /* pour les alertes critiques (Suppression) */
 .HAUTE {
-    color: #d32f2f; /* Un rouge sombre et sérieux */
-    font-weight: bold;
+    background-color: #d32f2f; /* Un rouge sombre et sérieux */
 }
 /* Style pour les infos (Ajout) */
 .INFO {
-    color: #1976d2; 
-    font-weight: 500;
+   background-color:  #1976d2; 
 }
 
