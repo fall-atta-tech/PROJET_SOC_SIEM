@@ -18,6 +18,8 @@
                 }                
             }else if(isset($_GET['succes']) && $_GET['succes']==1){
                 echo"<h3>Bienvenue cher(e) collégue</h3>";
+            }else if((isset($_GET['message'])) && $_GET['message']=='deconnecter'){
+                echo"<h4>Identifiant déconnecté</h4>";
             }
             ?>
             <form method='post' action='connexion.php'>

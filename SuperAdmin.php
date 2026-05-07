@@ -1,9 +1,24 @@
+<?php
+   session_start();
+?>
 <html>
+    <meta http-equiv="refresh" content="30">
     <link rel='stylesheet' href='decor.css'>
 <?php
-session_start();
-if(isset($_SESSION['verif'],$_SESSION['id_admin'])){
+if (isset($_SESSION['last_move']) && (time() - $_SESSION['last_move']) < 1800){
+    if(isset($_SESSION['verif'],$_SESSION['id_admin'])){
     if($_SESSION['verif']){
+         if(isset($_GET['erreur'],$_GET['succes'])){
+         if($_GET['succes']==0){
+            echo"<h3>Approbation effectuée avec succés</h3>";
+         }else if($_GET['erreur']==0){
+            echo"<h5>Serveur en panne</h5>";
+         }else if($_GET['succes']==1){
+            echo"<h3>Promotion effectuée avec succés</h3>";
+         }else if($_GET['succes']==2){
+            echo"<h3>Révocation effectuée avec succés</h3>";
+         }
+        }
         include 'db_connect.php';
         /*par mesure de sécurité je m'assure que l'utilisateur a les droits nécessaires 
         l'utilisateur est éjecter s'il n'est pas superadmin || s'il n'est pas approuvé  */
@@ -35,7 +50,7 @@ if(isset($_SESSION['verif'],$_SESSION['id_admin'])){
         echo"<th>Promouvoir</th>";
         echo"<th>Révoquer</th>";
         echo"</tr>";
-     while($admin=$demande->fetch(PDO::FETCH_ASSOC)){
+       while($admin=$demande->fetch(PDO::FETCH_ASSOC)){
           $approbation=(($admin['approbation']==1)?'Approuvé(e)':'En attente...'); 
           echo"<tr>";
           echo"<td>".htmlspecialchars($admin['nom'])."</td>";
@@ -49,12 +64,19 @@ if(isset($_SESSION['verif'],$_SESSION['id_admin'])){
           echo"<td><a href='gestion_admin.php?id=".$admin['id_admin']."&action=revoquer' class='revoc'>Révoquer</a>";
           echo"</tr>";
         }
-          echo"</table>";
+        echo"</table>";
     }
 }else{
     header("location:login.php?erreur==0");
     exit;
 }
+}else{
+    header("location:login.php?erreur==0");
+    exit;
+}
+}else{
+    header("location:deconnexion.php");
+    exit;
 }
 ?>
 </html>

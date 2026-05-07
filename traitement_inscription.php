@@ -1,6 +1,6 @@
 <?php
 SESSION_START();
-if(isset($_POST['nom'],$_POST['prenom'],$_POST['username'],$_POST['mdp'])){
+    if(isset($_POST['nom'],$_POST['prenom'],$_POST['username'],$_POST['mdp'])){
     if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['username']) && !empty($_POST['mdp'])){
         $nom=$_POST['nom'];
         $prenom=$_POST['prenom'];
@@ -21,6 +21,7 @@ if(isset($_POST['nom'],$_POST['prenom'],$_POST['username'],$_POST['mdp'])){
                'username'=>$username,
                'mdp'=>$mdp
             ]);
+            $_SESSION['last_move'] = time();
           header('location:login.php?succes=1');
           exit();
         }catch (PDOEXCEPTION $e) {           
